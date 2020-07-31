@@ -7,6 +7,18 @@
   <version>1.0-SNAPSHOT</version>
   <name>sg-app</name>
   <url>http://maven.apache.org</url>
+  <repositories>
+    <repository>
+      <id>publicrepo</id>
+      <name>publicrepo</name>
+      <url>http://maven.apache.org</url>
+    </repository>
+    <repository>
+      <id>sgappgroup</id>
+      <name>sgappgroup</name>
+      <url>http://13.88.189.253:8081/repository/sgappgroup/</url>
+    </repository>
+  </repositories>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
