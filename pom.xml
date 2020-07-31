@@ -16,7 +16,7 @@
     <repository>
       <id>sgappgroup</id>
       <name>sgappgroup</name>
-      <url>http://13.88.189.253:8081/repository/sgappgroup/</url>
+      <url>http://10.0.1.5:8081/repository/sgappgroup/</url>
     </repository>
   </repositories>
   <dependencies>
