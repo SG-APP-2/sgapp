@@ -27,6 +27,9 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+<profiles>
+  <profile>
+    <id>sgapp-deploy</id>
   <distributionManagement>
     <repository>
       <uniqueVersion>false</uniqueVersion>
@@ -43,4 +46,25 @@
       <layout>legacy</layout>
     </snapshotRepository>
   </distributionManagement>
+  </profile>
+  <profile>
+    <id>sgwebapp-deploy</id>
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>sgapp-releases</id>
+      <name>sgapp-releases</name>
+      <url>http://10.0.1.5:8081/repository/sgapp-releases/</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>sgapp-snapshots</id>
+      <name>sgapp-snapshots</name>
+      <url>http://10.0.1.5:8081/repository/sgapp-snapshots/</url>
+      <layout>legacy</layout>
+    </snapshotRepository>
+  </distributionManagement>
+  </profile>
+</profiles>
 </project>
