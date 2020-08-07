@@ -14,6 +14,12 @@ node("maven-label") {
             }
         }
     }
+    stage("sonar-qualitygate"){
+	    withCredentials([string(credentialsId: 'sonar_token', variable: 'sonar_token')]) {
+	    sh 'sh breakbuild.sh http://40.78.122.51:9000 "$sonar_token"'
+		    
+	    }
+    }
       stage('Build') {
         withEnv(["MVN_HOME=$mvnHome"]) {
             if (isUnix()) {
