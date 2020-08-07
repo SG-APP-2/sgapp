@@ -9,7 +9,7 @@ node("maven-label") {
       stage('Build') {
         withEnv(["MVN_HOME=$mvnHome"]) {
             if (isUnix()) {
-                sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean deploy'
+                sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore -P sgapp-deploy clean deploy'
             } else {
                 bat(/"%MVN_HOME%\bin\mvn" -Dmaven.test.failure.ignore clean package/)
             }
