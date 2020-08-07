@@ -2,7 +2,8 @@
 node("maven-label") {
     def mvnHome
     stage('Preparation') { 
-        git branch: 'dev', url: 'https://github.com/SG-APP-2/sgapp.git'
+        checkout scm
+        //git branch: 'dev', url: 'https://github.com/SG-APP-2/sgapp.git'
         mvnHome = tool 'maven-3.6.3'
     }
   
